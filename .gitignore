@@ -40,6 +40,5 @@ dist/
 .idea/
 
 # Data files (optional, if you don’t want to commit raw datasets)
-data/
 data/traffic_history.csv
 datasets/

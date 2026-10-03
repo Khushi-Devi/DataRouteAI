@@ -1,0 +1,10 @@
+region_id,provider_id,region_name,country
+AWS_MUM,AWS,Mumbai,India
+AWS_HYD,AWS,Hyderabad,India
+AWS_SIN,AWS,Singapore,Singapore
+AZURE_CIN,AZURE,Central India,India
+AZURE_SIN,AZURE,South India,India
+AZURE_SEA,AZURE,Southeast Asia,Singapore
+GCP_MUM,GCP,Mumbai,India
+GCP_DEL,GCP,Delhi,India
+GCP_SIN,GCP,Singapore,Singapore
