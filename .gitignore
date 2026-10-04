@@ -41,4 +41,5 @@ dist/
 
 # Data files (optional, if you don’t want to commit raw datasets)
 data/traffic_history.csv
+data/anomaly_events.csv
 datasets/
