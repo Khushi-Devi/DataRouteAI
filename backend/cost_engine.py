@@ -7,6 +7,17 @@ PRICING_FILE = "data/pricing_rules.csv"
 def load_pricing_rules():
     return pd.read_csv(PRICING_FILE)
 
+def convert_volume(volume, from_unit, to_unit):
+    if from_unit == to_unit:
+        return volume
+
+    if from_unit == "GB" and to_unit == "GiB":
+        return volume * (1_000_000_000 / 1_073_741_824)
+
+    if from_unit == "GiB" and to_unit == "GB":
+        return volume * (1_073_741_824 / 1_000_000_000)
+
+    raise ValueError(f"Unsupported conversion: {from_unit} -> {to_unit}")
 
 def calculate_tiered_cost(volume_gb, rules):
     """
@@ -72,7 +83,13 @@ def calculate_cost(
             "reason": "Pricing exists but price is unavailable"
         }
 
-    cost = calculate_tiered_cost(volume_gb, matching_rules)
+    billing_unit = matching_rules.iloc[0]["billing_unit"]
+    volume_for_pricing = convert_volume(
+        volume_gb,
+        "GB",
+        billing_unit
+    )
+    cost = calculate_tiered_cost(volume_for_pricing, matching_rules)
 
     return {
         "available": True,
