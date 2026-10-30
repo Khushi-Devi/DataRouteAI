@@ -1,0 +1,22 @@
+{
+    "lookback": 24,
+    "forecast_horizon": 1,
+    "feature_count": 77,
+    "base_feature_columns": [
+        "traffic_scaled",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos"
+    ],
+    "route_count": 72,
+    "target_column": "traffic_volume_gb",
+    "scaling_method": "MinMaxScaler_per_route",
+    "time_features": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos"
+    ],
+    "timezone": "UTC"
+}
