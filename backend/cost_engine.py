@@ -136,9 +136,10 @@
 #         "network_path": network_path
 #     }
 import pandas as pd
+from pathlib import Path
 
-
-PRICING_FILE = "data/pricing_rules.csv"
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+PRICING_FILE = PROJECT_DIR / "data" / "pricing_rules.csv"
 
 # Temporary default Azure path.
 # Later this can be replaced with proper network-path selection.
