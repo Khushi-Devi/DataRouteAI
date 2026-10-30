@@ -1,7 +1,8 @@
 import pandas as pd
+from pathlib import Path
 
-
-NETWORK_FILE = "data/network_metrics.csv"
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+NETWORK_FILE = PROJECT_DIR / "data" / "network_metrics.csv"
 
 
 # Available regions in the current prototype.

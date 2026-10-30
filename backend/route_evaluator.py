@@ -1,4 +1,4 @@
-from backend.route_cost import calculate_route_cost
+from route_cost import calculate_route_cost
 
 
 def get_provider(region_id):

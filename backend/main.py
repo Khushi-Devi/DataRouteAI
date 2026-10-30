@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from backend.route_generator import generate_routes
-from backend.route_evaluator import evaluate_routes
-from backend.route_optimizer import optimize_routes
+from route_generator import generate_routes
+from route_evaluator import evaluate_routes
+from route_optimizer import optimize_routes
 from fastapi.middleware.cors import CORSMiddleware
 
 
