@@ -41,5 +41,10 @@ dist/
 
 # Data files (optional, if you don’t want to commit raw datasets)
 data/traffic_history.csv
+data/traffic_history_prev.csv
 data/anomaly_events.csv
 datasets/
+
+#models 
+models/best_model.keras
+models/route_scalers.joblib
